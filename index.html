@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎰 パチンカスマン DM Dashboard</title>
+<style>
+  :root {
+    --bg: #0f0f0f;
+    --card: #1a1a2e;
+    --accent: #e94560;
+    --accent2: #0f3460;
+    --green: #00c853;
+    --yellow: #ffd600;
+    --orange: #ff6d00;
+    --blue: #2979ff;
+    --purple: #aa00ff;
+    --text: #e0e0e0;
+    --muted: #888;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .header h1 {
+    font-size: 2em;
+    background: linear-gradient(135deg, var(--accent), var(--yellow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .header .sub {
+    color: var(--muted);
+    margin-top: 5px;
+  }
+  .stats-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .stat-card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px 30px;
+    text-align: center;
+    min-width: 140px;
+    border: 1px solid #333;
+  }
+  .stat-card .num {
+    font-size: 2.5em;
+    font-weight: 800;
+  }
+  .stat-card .label {
+    color: var(--muted);
+    font-size: 0.85em;
+    margin-top: 5px;
+  }
+  .stat-card.accent .num { color: var(--accent); }
+  .stat-card.green .num { color: var(--green); }
+  .stat-card.yellow .num { color: var(--yellow); }
+  .stat-card.blue .num { color: var(--blue); }
+  .stat-card.purple .num { color: var(--purple); }
+  .stat-card.orange .num { color: var(--orange); }
+
+  /* Funnel */
+  .funnel-section {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #333;
+  }
+  .funnel-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.3em;
+  }
+  .funnel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .funnel-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .funnel-bar-wrap {
+    flex: 1;
+    position: relative;
+  }
+  .funnel-bar {
+    height: 38px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    font-weight: 700;
+    font-size: 0.95em;
+    min-width: 60px;
+    transition: width 0.6s ease;
+  }
+  .funnel-count {
+    width: 45px;
+    text-align: right;
+    font-weight: 800;
+    font-size: 1.2em;
+  }
+  .funnel-label {
+    width: 180px;
+    font-size: 0.85em;
+    color: var(--muted);
+  }
+  .funnel-arrow {
+    text-align: center;
+    color: var(--muted);
+    font-size: 1.2em;
+    padding-left: 225px;
+  }
+
+  /* User table */
+  .table-section {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #333;
+  }
+  .table-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 2px solid #333;
+    color: var(--muted);
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #222;
+    vertical-align: middle;
+  }
+  tr:hover td {
+    background: rgba(233, 69, 96, 0.05);
+  }
+  .stage-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 700;
+  }
+  .stage-1 { background: #333; color: #aaa; }
+  .stage-2 { background: #1a3a1a; color: var(--green); }
+  .stage-3 { background: #3a2a00; color: var(--yellow); }
+  .stage-4 { background: #0a2a4a; color: var(--blue); }
+  .stage-5 { background: #2a002a; color: var(--purple); }
+  .verified { color: var(--blue); font-size: 0.8em; }
+  .notes { color: var(--muted); font-size: 0.85em; max-width: 250px; }
+  .date { color: var(--muted); font-size: 0.85em; }
+
+  /* CVR */
+  .cvr-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cvr-card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 15px 25px;
+    text-align: center;
+    min-width: 200px;
+    border: 1px solid #333;
+  }
+  .cvr-card .cvr-num {
+    font-size: 1.8em;
+    font-weight: 800;
+    color: var(--accent);
+  }
+  .cvr-card .cvr-label {
+    color: var(--muted);
+    font-size: 0.8em;
+    margin-top: 3px;
+  }
+
+  @media (max-width: 600px) {
+    .stats-row { flex-direction: column; align-items: center; }
+    .funnel-label { width: 120px; font-size: 0.75em; }
+    .stat-card { min-width: 100%; }
+    table { font-size: 0.85em; }
+    .notes { max-width: 120px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🎰 パチンカスマン DM Dashboard</h1>
+  <div class="sub">@Pachikokb → TGコミュニティ誘導トラッカー</div>
+  <div class="sub" id="lastUpdated"></div>
+</div>
+
+<div class="stats-row" id="statsRow"></div>
+
+<div class="cvr-row" id="cvrRow"></div>
+
+<div class="funnel-section">
+  <h2>📊 コンバージョンファネル</h2>
+  <div class="funnel" id="funnel"></div>
+</div>
+
+<div class="table-section">
+  <h2>👤 ユーザー別ステータス</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ユーザー</th>
+        <th>ステージ</th>
+        <th>最終対応</th>
+        <th>メモ</th>
+      </tr>
+    </thead>
+    <tbody id="userTable"></tbody>
+  </table>
+</div>
+
+<script>
+const stageNames = {
+  1: '挨拶・初回接触',
+  2: '会話中（パチ話）',
+  3: 'コミュ紹介済み',
+  4: 'リンク送付済み',
+  5: 'TG参加済み ✅'
+};
+const stageColors = {
+  1: '#555',
+  2: '#00c853',
+  3: '#ffd600',
+  4: '#2979ff',
+  5: '#aa00ff'
+};
+
+async function load() {
+  const res = await fetch('data.json?t=' + Date.now());
+  const data = await res.json();
+  render(data);
+}
+
+function render(data) {
+  const { meta, users } = data;
+
+  // Last updated
+  document.getElementById('lastUpdated').textContent =
+    '最終更新: ' + new Date(meta.lastUpdated).toLocaleString('ja-JP');
+
+  // Count stages
+  const counts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+  users.forEach(u => counts[u.stage]++);
+  const total = meta.totalDmContacts || users.length;
+
+  // Stats row
+  const statsHtml = `
+    <div class="stat-card accent"><div class="num">${meta.followers.toLocaleString()}</div><div class="label">フォロワー</div></div>
+    <div class="stat-card orange"><div class="num">${total}</div><div class="label">DM接触済み</div></div>
+    <div class="stat-card green"><div class="num">${counts[2]}</div><div class="label">会話中</div></div>
+    <div class="stat-card yellow"><div class="num">${counts[3]}</div><div class="label">コミュ紹介済</div></div>
+    <div class="stat-card blue"><div class="num">${counts[4]}</div><div class="label">リンク送付</div></div>
+    <div class="stat-card purple"><div class="num">${counts[5]}</div><div class="label">TG参加 ✅</div></div>
+  `;
+  document.getElementById('statsRow').innerHTML = statsHtml;
+
+  // CVR
+  const cvrDm = total > 0 ? ((total / meta.followers) * 100).toFixed(1) : '0';
+  const cvrTg = total > 0 ? ((counts[5] / total) * 100).toFixed(1) : '0';
+  const cvrTotal = meta.followers > 0 ? ((counts[5] / meta.followers) * 100).toFixed(2) : '0';
+  document.getElementById('cvrRow').innerHTML = `
+    <div class="cvr-card"><div class="cvr-num">${cvrDm}%</div><div class="cvr-label">フォロワー → DM接触率</div></div>
+    <div class="cvr-card"><div class="cvr-num">${cvrTg}%</div><div class="cvr-label">DM → TG参加 CVR</div></div>
+    <div class="cvr-card"><div class="cvr-num">${cvrTotal}%</div><div class="cvr-label">全体CVR（フォロワー→TG）</div></div>
+  `;
+
+  // Funnel
+  const funnelData = [
+    { label: 'フォロワー', count: meta.followers, color: var_accent() },
+    { label: 'DM接触済み', count: total, color: '#ff6d00' },
+    { label: '会話中', count: counts[2] + counts[3] + counts[4] + counts[5], color: '#00c853' },
+    { label: 'コミュ紹介済', count: counts[3] + counts[4] + counts[5], color: '#ffd600' },
+    { label: 'リンク送付', count: counts[4] + counts[5], color: '#2979ff' },
+    { label: 'TG参加 ✅', count: counts[5], color: '#aa00ff' }
+  ];
+  const maxCount = funnelData[0].count || 1;
+  let funnelHtml = '';
+  funnelData.forEach((f, i) => {
+    const pct = Math.max((f.count / maxCount) * 100, 5);
+    funnelHtml += `
+      <div class="funnel-step">
+        <div class="funnel-label">${f.label}</div>
+        <div class="funnel-bar-wrap">
+          <div class="funnel-bar" style="width:${pct}%;background:${f.color}">${f.count}</div>
+        </div>
+      </div>
+    `;
+    if (i < funnelData.length - 1) {
+      funnelHtml += `<div class="funnel-arrow">↓</div>`;
+    }
+  });
+  document.getElementById('funnel').innerHTML = funnelHtml;
+
+  // User table
+  const sorted = [...users].sort((a, b) => b.stage - a.stage || b.lastInteraction.localeCompare(a.lastInteraction));
+  let tableHtml = '';
+  sorted.forEach(u => {
+    const badge = `<span class="stage-badge stage-${u.stage}">${stageNames[u.stage]}</span>`;
+    const v = u.verified ? ' <span class="verified">✅</span>' : '';
+    tableHtml += `
+      <tr>
+        <td><strong>${u.username}</strong>${v}</td>
+        <td>${badge}</td>
+        <td class="date">${u.lastInteraction}</td>
+        <td class="notes">${u.notes || ''}</td>
+      </tr>
+    `;
+  });
+  document.getElementById('userTable').innerHTML = tableHtml;
+}
+
+function var_accent() { return '#e94560'; }
+
+load();
+</script>
+</body>
+</html>

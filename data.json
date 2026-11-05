@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "account": "@Pachikokb",
+    "followers": 1395,
+    "lastUpdated": "2026-11-05T16:45:00+08:00",
+    "totalDmContacts": 210,
+    "note": "詳細49人 + 残り約161人は3日前のバズ時にDM送信済み（全員ステージ1）"
+  },
+  "stages": {
+    "1": "挨拶・初回接触",
+    "2": "会話中（パチ話で盛り上がり）",
+    "3": "コミュニティ紹介済み",
+    "4": "TGリンク送付済み",
+    "5": "TG参加確認済み ✅"
+  },
+  "users": [
+    {
+      "username": "スロプロ狐ちゃんねる",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-05",
+      "notes": "挨拶完了・♥️リアクション済み"
+    },
+    {
+      "username": "misaki",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-04",
+      "notes": "挨拶完了・♥️リアクション済み"
+    },
+    {
+      "username": "†刻々帝†",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-04",
+      "notes": "挨拶完了・♥️リアクション済み"
+    },
+    {
+      "username": "Kira🐈",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-04",
+      "notes": "❤リアクション"
+    },
+    {
+      "username": "MGM鈴鹿＠店長中山",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-04",
+      "notes": "挨拶完了・♥️リアクション済み"
+    },
+    {
+      "username": "設定4の人",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-03",
+      "notes": "挨拶完了・♥️リアクション済み"
+    },
+    {
+      "username": "ほらんど",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-03",
+      "notes": "👍リアクション"
+    },
+    {
+      "username": "ラントォ@低浮上気味",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-03",
+      "notes": "👍リアクション"
+    },
+    {
+      "username": "ゆきち@mgmg-panda",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-03",
+      "notes": ""
+    },
+    {
+      "username": "もんもん@バンジーぶっ飛び",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-03",
+      "notes": ""
+    },
+    {
+      "username": "キングマック",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-10-31",
+      "notes": ""
+    },
+    {
+      "username": "samurainauts公式",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-10-30",
+      "notes": ""
+    },
+    {
+      "username": "yo",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-10-30",
+      "notes": ""
+    },
+    {
+      "username": "ぱんスロ",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-10-30",
+      "notes": ""
+    },
+    {
+      "username": "脳汁ひな子",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-10-30",
+      "notes": ""
+    },
+    {
+      "username": "†闇の王子黒斗†",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-10-29",
+      "notes": ""
+    },
+    {
+      "username": "青島",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-03",
+      "notes": "❤リアクション"
+    },
+    {
+      "username": "おちゃる",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-03",
+      "notes": "アドバイスできるほど有能…"
+    },
+    {
+      "username": "キモリ",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-03",
+      "notes": "❤リアクション"
+    },
+    {
+      "username": "スロッターEmimi",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-03",
+      "notes": "皆んなの財布を守ってくだ…"
+    },
+    {
+      "username": "6択のワタリ",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "お返事ありがと…"
+    },
+    {
+      "username": "金山パチンコ侍",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-03",
+      "notes": "こちらこそありがとうござ…"
+    },
+    {
+      "username": "ゆう✨光の射す方へspoon",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": ""
+    },
+    {
+      "username": "ゆっくり実況ハイゼンベルク",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "間違えました"
+    },
+    {
+      "username": "ぶんちょ🐥",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "これはリプ元のポスト"
+    },
+    {
+      "username": "スガちゃん",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "ありがとうございます！"
+    },
+    {
+      "username": "スロパチ専務バブル希望隊長",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "❤リアクション"
+    },
+    {
+      "username": "♥️あーくん🌈",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "お返事ありがとうございます"
+    },
+    {
+      "username": "カインGames🎮",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "めちゃくちゃ面白そうです…"
+    },
+    {
+      "username": "ゆ〜かさん@パチカス・バンドリ",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": ""
+    },
+    {
+      "username": "裏ドラえもん@裏モノ",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "♥️リアクション"
+    },
+    {
+      "username": "すろまに",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "❤リアクション"
+    },
+    {
+      "username": "のら猫🐾",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": ""
+    },
+    {
+      "username": "チビデブクソメグサン",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": ""
+    },
+    {
+      "username": "スロキン部長@JOY STAGE",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": ""
+    },
+    {
+      "username": "ゆず燐",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": ""
+    },
+    {
+      "username": "愛澤苅秋💕地雷系Vtuber",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": ""
+    },
+    {
+      "username": "เกษีณอายุ",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": ""
+    },
+    {
+      "username": "おーうち。",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": ""
+    },
+    {
+      "username": "けーすけ",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "❤リアクション"
+    },
+    {
+      "username": "夢双れいちゅ",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "こちらこそよろしくお願い…"
+    },
+    {
+      "username": "✨きらり🎰",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": ""
+    },
+    {
+      "username": "てちゃう！三毛桜ゆう",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "❤リアクション"
+    },
+    {
+      "username": "ぱちめん@豊丸産業",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "よろしくお願いします！"
+    },
+    {
+      "username": "ランカ",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "よろしくお願いします"
+    },
+    {
+      "username": "猫宮えれこ🐱",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "❤リアクション"
+    },
+    {
+      "username": "tommy1🚗",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": "❤リアクション"
+    },
+    {
+      "username": "KEN",
+      "verified": true,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": ""
+    },
+    {
+      "username": "毒舌ヤン@パチンコ生活者",
+      "verified": false,
+      "stage": 1,
+      "lastInteraction": "2026-11-02",
+      "notes": ""
+    }
+  ]
+}
