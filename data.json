@@ -2,9 +2,13 @@
   "meta": {
     "account": "@Pachikokb",
     "followers": 1395,
-    "lastUpdated": "2026-11-05T16:45:00+08:00",
+    "lastUpdated": "2026-11-05T17:03:31+08:00",
     "totalDmContacts": 210,
-    "note": "詳細49人 + 残り約161人は3日前のバズ時にDM送信済み（全員ステージ1）"
+    "note": "詳細49人 + 残り約161人は3日前のバズ時にDM送信済み（全員ステージ1）",
+    "updateSource": "x-api",
+    "following": 724,
+    "tweets": 507,
+    "likes": 2847
   },
   "stages": {
     "1": "挨拶・初回接触",
