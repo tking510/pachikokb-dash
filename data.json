@@ -2,13 +2,13 @@
   "meta": {
     "account": "@Pachikokb",
     "followers": 1395,
-    "lastUpdated": "2026-11-05T19:04:00+08:00",
+    "lastUpdated": "2026-11-09T09:03:00+08:00",
     "totalDmContacts": 210,
     "note": "詳細49人 + 残り約161人は3日前のバズ時にDM送信済み（全員ステージ1）",
     "updateSource": "x-api",
-    "following": 724,
+    "following": 739,
     "tweets": 507,
-    "likes": 2847
+    "likes": 2848
   },
   "stages": {
     "1": "挨拶・初回接触",
@@ -169,8 +169,8 @@
       "username": "金山パチンコ侍",
       "verified": false,
       "stage": 2,
-      "lastInteraction": "2026-11-05",
-      "notes": "ステージ2: Phase2 会話再開DM送信済み"
+      "lastInteraction": "2026-11-09",
+      "notes": "リゼロの話で盛り上がり。🙌リアクション"
     },
     {
       "username": "ゆう✨光の射す方へspoon",
@@ -456,6 +456,14 @@
       "stage": 2,
       "lastInteraction": "2026-11-05",
       "notes": "ステージ2: ファーストコンタクト返信。パチ確認中"
+    },
+    {
+      "username": "プリン",
+      "handle": "@hangyodon47317",
+      "verified": false,
+      "stage": 2,
+      "lastInteraction": "2026-11-09",
+      "notes": "スロット8割パチ2割。好きな機種:ダンベル何キロ持てる。Aタイプも好き。"
     }
   ]
 }
